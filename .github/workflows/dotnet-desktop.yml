@@ -43,9 +43,3 @@ jobs:
     - name: Run unit tests
       run: dotnet test ${{ env.TEST_PROJECT_PATH }} --configuration Release --no-build --logger trx
       
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: test-results
-        path: **/TestResults/*.trx
