@@ -38,4 +38,4 @@ jobs:
       run: dotnet restore ${{ env.SOLUTION_NAME }}
       
     - name: Run unit tests
-      run: dotnet test ${{ env.TEST_PROJECT_PATH }} --configuration Debug --no-build --logger trx
+      run: dotnet test ${{ env.TEST_PROJECT_PATH }} --configuration Debug --no-build 
