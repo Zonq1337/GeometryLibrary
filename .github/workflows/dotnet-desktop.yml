@@ -36,9 +36,6 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_NAME }}
-
-    - name: Build solution
-      run: dotnet build ${{ env.SOLUTION_NAME }} --configuration Debug --no-restore
-
+      
     - name: Run unit tests
       run: dotnet test ${{ env.TEST_PROJECT_PATH }} --configuration Debug --no-build --logger trx
